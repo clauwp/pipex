@@ -11,11 +11,8 @@ CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 NAME = pipex
 
-${OBJS} : 
-	${CC} ${CFLAGS} -c ${SRCS}
-
-${NAME}: ${OBJS}
-	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
+${NAME}:
+	${CC} ${CFLAGS} ${SRCS} -o ${NAME}
 
 all: ${NAME}
 
